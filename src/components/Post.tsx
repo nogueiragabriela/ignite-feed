@@ -13,7 +13,7 @@ interface Author {
 }
 
 interface Content {
-  type: 'paragraph' | 'link';
+  type: string;
   content: string;
 }
 
@@ -25,7 +25,7 @@ interface PostProps {
 
 export function Post({author, publishedAt, content}: PostProps) {
   const [comments, setComments] = useState([
-    'Post muito legal!'
+    'Muito legal 💜'
   ])
 
   const [newCommentText, setNewCommentText] = useState('')
